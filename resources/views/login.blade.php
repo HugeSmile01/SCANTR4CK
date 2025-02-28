@@ -21,6 +21,48 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
+    <style>
+        button {
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="email"], input[type="password"] {
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="email"]:focus, input[type="password"]:focus {
+            border-color: #007bff;
+        }
+
+        @media (max-width: 768px) {
+            button {
+                width: 100%;
+                padding: 15px;
+            }
+
+            input[type="email"], input[type="password"] {
+                padding: 15px;
+            }
+        }
+
+        button[aria-label] {
+            position: relative;
+        }
+
+        button[aria-label]::after {
+            content: attr(aria-label);
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body style="background-color: #20232a;">
     <h1 style="color: #61dafb;">Login</h1>
@@ -29,7 +71,7 @@
         <input type="email" id="email" name="email" required>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
-        <button type="submit">Login</button>
+        <button type="submit" aria-label="Login">Login</button>
     </form>
     <script>
         document.getElementById('login-form').addEventListener('submit', function(event) {

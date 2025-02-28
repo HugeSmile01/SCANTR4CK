@@ -49,8 +49,54 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* P93f2 */
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease; /* P93f2 */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+}
+
+/* Media Queries for Responsive Design (P9271) */
+@media (max-width: 768px) {
+    #attendance-data, #scanner {
+        width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+        padding: 15px;
+    }
+}
+
+/* ARIA Labels for Accessibility (Pc89e) */
+button[aria-label] {
+    position: relative;
+}
+
+button[aria-label]::after {
+    content: attr(aria-label);
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }

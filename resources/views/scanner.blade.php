@@ -25,8 +25,14 @@
 </head>
 <body style="background-color: #20232a;">
     <h1 style="color: #61dafb;">QR Code Scanner</h1>
-    <div id="scanner" style="background-color: #282c34;">
+    <div id="scanner" aria-label="QR Code Scanner" style="background-color: #282c34;">
         <!-- QR code scanner will be implemented here -->
+    </div>
+    <div id="loading-spinner" aria-label="Loading" style="display: none;">
+        <img src="{{ asset('images/spinner.gif') }}" alt="Loading...">
+    </div>
+    <div id="error-message" aria-label="Error" style="display: none; color: red;">
+        Failed to scan QR code. Please try again later.
     </div>
     <script src="{{ asset('js/scanner.js') }}"></script>
 </body>

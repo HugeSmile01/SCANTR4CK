@@ -28,10 +28,16 @@
     <form id="search-form" style="background-color: #282c34;">
         <label for="student-id">Student ID:</label>
         <input type="text" id="student-id" name="student_id" required>
-        <button type="submit">Search</button>
+        <button type="submit" aria-label="Search">Search</button>
     </form>
     <div id="search-results">
         <!-- Search results will be displayed here -->
+    </div>
+    <div id="loading-spinner" aria-label="Loading" style="display: none;">
+        <img src="{{ asset('images/spinner.gif') }}" alt="Loading...">
+    </div>
+    <div id="error-message" aria-label="Error" style="display: none; color: red;">
+        Failed to fetch data. Please try again later.
     </div>
     <script src="{{ asset('js/search.js') }}"></script>
 </body>
