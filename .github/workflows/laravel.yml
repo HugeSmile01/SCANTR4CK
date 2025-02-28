@@ -45,11 +45,16 @@ jobs:
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
     - name: Build Project
-      run: npm run production
+      run: npm run build
+
+    - name: Move Build Output to docs Folder
+      run: |
+        mkdir -p docs
+        cp -r public/* docs/
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
+        publish_dir: ./docs
         publish_branch: gh-pages
