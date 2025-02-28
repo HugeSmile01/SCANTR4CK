@@ -23,9 +23,9 @@
         firebase.initializeApp(firebaseConfig);
     </script>
 </head>
-<body>
-    <h1>Attendance Dashboard</h1>
-    <div id="attendance-data">
+<body style="background-color: #20232a;">
+    <h1 style="color: #61dafb;">Attendance Dashboard</h1>
+    <div id="attendance-data" style="background-color: #282c34;">
         <!-- Attendance data will be displayed here -->
     </div>
     <script src="{{ asset('js/dashboard.js') }}"></script>

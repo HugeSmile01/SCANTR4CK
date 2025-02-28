@@ -23,9 +23,9 @@
         firebase.initializeApp(firebaseConfig);
     </script>
 </head>
-<body>
-    <h1>QR Code Scanner</h1>
-    <div id="scanner">
+<body style="background-color: #20232a;">
+    <h1 style="color: #61dafb;">QR Code Scanner</h1>
+    <div id="scanner" style="background-color: #282c34;">
         <!-- QR code scanner will be implemented here -->
     </div>
     <script src="{{ asset('js/scanner.js') }}"></script>
