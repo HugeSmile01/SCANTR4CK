@@ -23,9 +23,9 @@
         firebase.initializeApp(firebaseConfig);
     </script>
 </head>
-<body>
-    <h1>Search Attendance Logs</h1>
-    <form id="search-form">
+<body style="background-color: #20232a;">
+    <h1 style="color: #61dafb;">Search Attendance Logs</h1>
+    <form id="search-form" style="background-color: #282c34;">
         <label for="student-id">Student ID:</label>
         <input type="text" id="student-id" name="student_id" required>
         <button type="submit">Search</button>

@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #20232a;
 }
 
 h1 {
-    color: #333;
+    color: #61dafb;
     text-align: center;
     margin-top: 20px;
 }
@@ -15,7 +15,7 @@ h1 {
     width: 80%;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #282c34;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 

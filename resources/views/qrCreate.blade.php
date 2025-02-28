@@ -23,9 +23,9 @@
         firebase.initializeApp(firebaseConfig);
     </script>
 </head>
-<body>
-    <h1>QR Code Generator</h1>
-    <div id="qr-code-generator">
+<body style="background-color: #20232a;">
+    <h1 style="color: #61dafb;">QR Code Generator</h1>
+    <div id="qr-code-generator" style="background-color: #282c34;">
         <input type="text" id="student-id" placeholder="Enter Student ID">
         <button onclick="generateQRCode()">Generate QR Code</button>
         <div id="qr-code"></div>

@@ -22,9 +22,9 @@
         firebase.initializeApp(firebaseConfig);
     </script>
 </head>
-<body>
-    <h1>Login</h1>
-    <form id="login-form">
+<body style="background-color: #20232a;">
+    <h1 style="color: #61dafb;">Login</h1>
+    <form id="login-form" style="background-color: #282c34;">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <label for="password">Password:</label>
