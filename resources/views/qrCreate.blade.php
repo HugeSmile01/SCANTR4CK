@@ -27,8 +27,14 @@
     <h1 style="color: #61dafb;">QR Code Generator</h1>
     <div id="qr-code-generator" style="background-color: #282c34;">
         <input type="text" id="student-id" placeholder="Enter Student ID">
-        <button onclick="generateQRCode()">Generate QR Code</button>
+        <button onclick="generateQRCode()" aria-label="Generate QR Code">Generate QR Code</button>
         <div id="qr-code"></div>
+    </div>
+    <div id="loading-spinner" aria-label="Loading" style="display: none;">
+        <img src="{{ asset('images/spinner.gif') }}" alt="Loading...">
+    </div>
+    <div id="error-message" aria-label="Error" style="display: none; color: red;">
+        Failed to generate QR code. Please try again later.
     </div>
     <script src="{{ asset('js/qrCreate.js') }}"></script>
 </body>

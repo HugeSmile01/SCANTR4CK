@@ -4,6 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Scantrack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #20232a;
+        }
+
+        h1 {
+            color: #61dafb;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #ffffff;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* P022a */
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s ease; /* P022a */
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+            border-color: #007bff;
+        }
+
+        /* Media Queries for Responsive Design (P81ee) */
+        @media (max-width: 768px) {
+            button {
+                width: 100%;
+                padding: 15px;
+            }
+
+            input[type="text"], input[type="email"], input[type="password"] {
+                padding: 15px;
+            }
+        }
+
+        /* ARIA Labels for Accessibility (P3965) */
+        button[aria-label] {
+            position: relative;
+        }
+
+        button[aria-label]::after {
+            content: attr(aria-label);
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to Scantrack</h1>

@@ -28,6 +28,12 @@
     <div id="attendance-data" style="background-color: #282c34;">
         <!-- Attendance data will be displayed here -->
     </div>
+    <div id="loading-spinner" aria-label="Loading" style="display: none;">
+        <img src="{{ asset('images/spinner.gif') }}" alt="Loading...">
+    </div>
+    <div id="error-message" aria-label="Error" style="display: none; color: red;">
+        Failed to fetch data. Please try again later.
+    </div>
     <script src="{{ asset('js/dashboard.js') }}"></script>
 </body>
 </html>
